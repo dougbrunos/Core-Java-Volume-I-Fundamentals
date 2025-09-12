@@ -18,6 +18,10 @@ public class EmployeeTest {
         for (Employee e : staff)
             System.out.println("name=" + e.getName() + ",salary=" + e.getSalary() + ",hireDay=" + e.getHireDay());
 
+
+        // To call this static method, you supply the name of the class:   
+        int n = Employee.advanceId();
+        System.out.println(n);
     }
 
 }

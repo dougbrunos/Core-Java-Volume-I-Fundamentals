@@ -6,9 +6,9 @@ public class ObjectsAndObjectVariables {
     public static void main(String[] args) {
         System.out.println(new Date().toString());
 
-        Date startTime; // startTime doesn't refer to any object
+        // Date startTime; // startTime doesn't refer to any object
 
-        Date endTime = new Date();
+        // Date endTime = new Date();
 
         // Uses LocalDate to express days in the familiar calendar
         System.out.println(LocalDate.now());

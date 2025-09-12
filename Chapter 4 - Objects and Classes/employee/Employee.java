@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 public class Employee {
 
+    private static int nextId = 1;
+    private int id;
     private String name;
     private double salary;
     private LocalDate hireDay;
@@ -12,6 +14,8 @@ public class Employee {
         name = n;
         salary = s;
         hireDay = LocalDate.of(year, month, day);
+        this.id = nextId;
+        nextId++;
     }
 
     public String getName() {
@@ -41,6 +45,13 @@ public class Employee {
     public void raiseSalary(double byPercent) {
         double raise = this.salary * byPercent / 100;
         this.salary += raise;
+    }
+
+    // Static Method
+    public static int advanceId() {
+        int r = nextId; // obtain next available id
+        nextId++;
+        return r;
     }
 
 }
