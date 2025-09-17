@@ -4,6 +4,7 @@ public class Employee {
 
     private static int nextId = 1;
     private int id;
+
     private String name;
     private double salary;
     private LocalDate hireDay;
@@ -14,6 +15,10 @@ public class Employee {
         hireDay = LocalDate.of(year, month, day);
         this.id = nextId;
         nextId++;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
